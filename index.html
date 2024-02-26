@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Sora", sans-serif;
+        }
+
+        .review-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: 100px;
+            grid-template-areas:
+                "r r r r r r v v v v v v";
+            padding: 200px 100px;
+        }
+
+        .reviewer {
+            grid-area: r;
+        }
+
+        .review {
+            grid-area: v;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 20px;
+            grid-template-areas:
+                ". . . . g g g g g g g g"
+                "m m m m m m m m . . . .";
+        }
+
+        #review-section-img {
+            padding: 8px;
+            background-color: yellow;
+            height: 32px;
+            border-radius: 100px;
+        }
+
+        #reviwer-title {
+            font-size: 2.25rem;
+            color: #18181B;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        #reviewer-text {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: #52525A;
+            line-height: 160%;
+        }
+
+        .reviewer ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .reviewer ul li {
+            list-style-type: none;
+            display: flex;
+            gap: 8px;
+            color: #52525A;
+        }
+
+        .reviewer ul li p {
+            margin: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .review-item {
+            border-radius: 16px;
+            background: #FFF;
+            box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+            padding: 32px;
+
+        }
+
+        #review-1 {
+            grid-area: g;
+        }
+
+        #review-2 {
+            grid-area: m;
+        }
+
+        .company-logo-rating {
+            display: flex;
+            align-items: center;
+        }
+
+        .company-logo {
+            height: 32px;
+            padding-right: 20px;
+        }
+
+        .rating ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* gap: 8px; */
+            align-items: center;
+        }
+
+        .rating ul li {
+            list-style-type: none;
+        }
+
+        .name {
+            font-size: 16px;
+            color: #18181B;
+        }
+
+        .review-text {
+            font-size: 16px;
+            font-weight: 300;
+            color: #52525A;
+        }
+
+        @media screen and (max-width: 640px) {
+            .review-container {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas:
+                    "r r r r r r r r r r r r"
+                    "v v v v v v v v v v v v";
+                padding: 40px 16px;
+            }
+            .review-item {
+            /* padding: 0px; */
+
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="review-container">
+            <div class="reviewer">
+                <img id="review-section-img" src="resources/Star_fill.svg" alt="">
+                <h3 id="reviwer-title">Reviewers</h3>
+                <p id="reviewer-text">Reviewers is where people can access guidelines, checklists, and other tools to
+                    assist them in
+                    reviewing papers or manuscripts. It provides a structured approach to ensure that the review process
+                    is thorough, efficient, and consistent.</p>
+                <ul>
+                    <li>
+                        <img src="resources/Done_ring_round_fill.svg" alt="">
+                        <p>Checklist to Review an Academic Paper</p>
+                    </li>
+                    <li>
+                        <img src="resources/Done_ring_round_fill.svg" alt="">
+                        <p>Peer Review Checklist</p>
+                    </li>
+                    <li>
+                        <img src="resources/Done_ring_round_fill.svg" alt="">
+                        <p>Checklist for Editors, Reviewers, and Authors of SPIE Journals</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="review">
+                <div class="review-item" id="review-1">
+                    <div class="company-logo-rating">
+                        <img class="company-logo" src="resources/google-testimonial.png" alt="">
+                        <div class="rating">
+                            <ul>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                                <li><img src="resources/Star_fill_gray.svg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 class="name">Samantha Lee</h4>
+                    <p class="review-text">
+                        The checklist ensures that the review process is thorough
+                    </p>
+                </div>
+                <div class="review-item" id="review-2">
+                    <div class="company-logo-rating">
+                        <img class="company-logo" src="resources/meta-testimonial.png" alt="">
+                        <div class="rating">
+                            <ul>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                                <li><img src="resources/Star_fill.svg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 class="name">Rachel Patel</h4>
+                    <p class="review-text">
+                        I highly recommend the Writecream Business Description
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
